@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Winston Spencer Percybrooks Bolivar",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 132.56, "left": -69.49, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -38.78,
+      "left": -34.22,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -39.71,
+      "left": 23.11,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-resistor", "id": "r1", "top": 23.36, "left": -77.6, "attrs": {} },
+    { "type": "wokwi-resistor", "id": "r2", "top": 61.95, "left": -53.13, "attrs": {} }
+  ],
+  "connections": [
+    [ "r1:2", "led1:C", "green", [ "v0" ] ],
+    [ "r1:1", "uno:GND.1", "green", [ "v0" ] ],
+    [ "r2:1", "uno:GND.1", "green", [ "v0" ] ],
+    [ "led2:C", "r2:2", "green", [ "v0" ] ],
+    [ "led2:A", "uno:3", "green", [ "v-1", "h63" ] ],
+    [ "led1:A", "uno:4", "green", [ "v46", "h119", "v4" ] ]
+  ]
+}
