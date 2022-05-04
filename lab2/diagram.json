@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "author": "Jorge Eduardo Castilla Bonet",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 3.55, "left": -282.13, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -184.13,
+      "left": -95.01,
+      "attrs": { "digits": "2" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -197.08,
+      "left": -301.49,
+      "attrs": { "color": "green"}
+    },
+    { "type": "wokwi-resistor", "id": "r1", "top": -194.85, "left": -408.66, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:7", "sevseg1:A", "green", [ "v-45", "h-39", "v-136", "h50" ] ],
+    [ "uno:6", "sevseg1:B", "green", [ "v-59", "h-37", "v-113", "h50" ] ],
+    [ "uno:5", "sevseg1:C", "green", [ "v-81", "h-6" ] ],
+    [ "sevseg1:DIG1", "uno:8", "green", [ "v-31", "h-83", "v164", "h37" ] ],
+    [ "sevseg1:DIG2", "uno:9", "green", [ "v-45", "h-105", "v187", "h36" ] ],
+    [ "r1:1", "uno:5V", "green", [ "v410", "h282" ] ],
+    [ "btn1:1.l", "r1:2", "green", [ "h0" ] ],
+    [ "btn1:2.r", "uno:GND.1", "green", [ "h0" ] ],
+    [ "sevseg1:G", "uno:0", "green", [ "h0" ] ],
+    [ "sevseg1:F", "uno:1", "green", [ "v-30.95", "h36.55", "v199.62", "h-45.76" ] ],
+    [ "sevseg1:E", "uno:2", "green", [ "v0" ] ],
+    [ "sevseg1:D", "uno:3", "green", [ "v90.21", "h0.39" ] ],
+    [ "uno:4", "r1:2", "green", [ "v-70.78", "h0.22" ] ]
+  ]
+}
